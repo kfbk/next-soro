@@ -1,0 +1,60 @@
+【Next.js】Tailwind CSS を使用する
+https://qiita.com/P-man_Brown/items/6e9e1f18453a39bda4de
+
+プロジェクトを作成
+	npx create-next-app next_soro
+	cd next_soro
+	yarn dev
+
+Tailwind CSSをインストール
+	npm install -D tailwindcss postcss autoprefixer
+Tailwind CSSの設定
+	npx tailwindcss init -p
+
+TailwindCSSのレスポンシブデザイン
+https://qiita.com/senju797/items/ad85794ec927f6ebd7bc
+
+
+ハンバーガーメニューの移植
+	next-netlifyにあるハンバーガーメニューを移植する方法
+	１．_app.js：Layoutで囲う
+	２．components/layout：ここにメニュー配列を書く
+	３．components/header：そっくりコピーする
+	４．public/images/menu.png：コピーする
+
+今の場所（current url）を判定してメニューの表示を変える
+https://zenn.dev/k_neko3/articles/893c2409f405b0
+
+静的サイトか確認するためNetlifyにデプロイする
+https://zenn.dev/ttani/articles/nextjs-netlify-deploy
+
+	GitHubにリポジトリを用意する
+		https://github.com/kfbk
+		new repogitory : next-soro
+		hhttps : https://github.com/kfbk/next-soro.git
+
+	手元のソースをGitHubにプッシュする
+		git init
+		git remote add origin https://github.com/kfbk/next-soro.git
+		git branch -M main
+		git push -u origin main
+
+	Netlify側でリポジトリの取り込み設定を行う
+		https://app.netlify.com/teams/zuo-teng-bang-nan/overview	bitbucket
+		Sites-Add new site-Import an existing projectを選択
+		Connect to Git providerでGitHubを選択
+		設定を行う
+		Deploy Siteを押下（１．deploy完了を待つ、２，３は無視））
+
+	Netlify側でWebhookの設定を行う（不要かもしれない）
+		NetlifyのBuild & deploy-Build hooks-Add build hookを選択
+		以下の設定を実施
+			Build hook name：任意の名前を設定（例：microCMS Hook）
+			Branch to Build：Hookをトリガにビルドするブランチを設定（main)
+		URLが表示されるのでコピーしておく
+
+	以上で出来るので、ソース変更・保存
+		git add .
+		git commit -m "first commit"
+		git push -u origin main			2,3分後に、反映された
+
