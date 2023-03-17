@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <>
-      <form name="contact" method="POST" netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <p>
           <label className="block float-left w-20">
             名前：
@@ -22,7 +22,7 @@ export default function Contact() {
           <label className="block float-left w-20">
             内容：
           </label>
-            <textarea  name="name" cols="50" rows="10"  required
+            <textarea  name="content" cols="50" rows="10"  required
               className="box-border border-2 border-gray-600"
               />
         </p>
