@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="Contact" method="POST" data-netlify="true">
         <p>
           <label className="block float-left w-20">
             名前：
