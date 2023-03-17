@@ -78,6 +78,12 @@ error
 	npm ERR! A complete log of this run can be found in:
 	npm ERR!     C:\Users\user\AppData\Local\npm-cache\_logs\2023-03-16T02_55_02_060Z-debug-0.log
 
-Next.js / Vercel / HubSpot Forms APIの組み合わせでお問い合わせフォームを作ってみた
+Next.js / Vercel / HubSpot Forms APIの組み合わせでお問い合わせフォームを作ってみた（よくわからないので中止）
 https://pentaprogram.tokyo/blog/Xe9WTrsSw
 
+Netlifyでお問い合わせフォームを作る方法			OK
+https://ralacode.com/blog/post/netlify-forms/
+
+	当記事の通りではうまく行かず、smalltripをみて真似をしたらOKになった
+	ただ、送信後、「Thank you our site」のメッセージが出るのがやだ。
+	ロリポップに移植した後は、ここは変える必要がある
